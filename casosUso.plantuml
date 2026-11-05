@@ -1,0 +1,98 @@
+@startuml usecaseDiagram
+left to right direction
+
+actor "Administrador del Sistema" as AdminSistema
+actor "Entrenador" as Entrenador
+actor "Alumno" as Alumno
+actor "Usuario" as Usuario
+
+' ADMINISTRADOR
+usecase "1. Registrar alumno" as U1
+usecase "2. Modificar alumno" as U2
+usecase "3. Consultar alumno" as U3
+usecase "4. Eliminar alumno" as U4
+
+usecase "5. Registrar entrenador" as U5
+usecase "6. Modificar entrenador" as U6
+usecase "7. Consultar entrenador" as U7
+usecase "8. Eliminar entrenador" as U8
+
+usecase "9. Registrar ejercicio" as U9
+usecase "10. Modificar ejercicio" as U10
+usecase "11. Consultar ejercicio" as U11
+usecase "12. Eliminar ejercicio" as U12
+
+'ENTRENADOR
+usecase "13. Registrar plan de entrenamiento" as U13
+usecase "14. Modificar plan de entrenamiento" as U14
+usecase "15. Consultar plan de entrenamiento" as U15
+usecase "16. Eliminar plan de entrenamiento" as U16
+
+usecase "17. Registrar programa" as U17
+usecase "18. Modificar programa" as U18
+usecase "19. Consultar programa" as U19
+usecase "20. Eliminar programa" as U20
+
+usecase "21. Registrar rutina" as U21
+usecase "22. Modificar rutina" as U22
+usecase "23. Consultar rutina" as U23
+usecase "24. Eliminar rutina" as U24
+
+usecase "25. Consultar solicitudes" as U25
+usecase "26. Aceptar una solicitud" as U26
+usecase "27. Rechazar una solicitud" as U27
+
+'ALUMNO
+usecase "28. Registrar entrenamiento" as U28
+usecase "29. Modificar entrenamiento" as U29
+usecase "30. Consultar entrenamiento" as U30
+usecase "31. Eliminar entrenamiento" as U31
+
+usecase "32. Solicitar entrenador" as U32
+
+usecase "33. Iniciar sesion" as U33
+usecase "34. Cerrar sesion" as U34
+
+
+AdminSistema --|> Usuario
+Entrenador --|> Usuario
+Alumno --|> Usuario
+Usuario --> U33
+Usuario --> U34
+
+AdminSistema --> U1
+AdminSistema --> U2
+AdminSistema --> U3
+AdminSistema --> U4
+AdminSistema --> U5
+AdminSistema --> U6
+AdminSistema --> U7
+AdminSistema --> U8
+AdminSistema --> U9
+AdminSistema --> U10
+AdminSistema --> U11
+AdminSistema --> U12
+
+Entrenador --> U13
+Entrenador --> U14
+Entrenador --> U15
+Entrenador --> U16
+Entrenador --> U17
+Entrenador --> U18
+Entrenador --> U19
+Entrenador --> U20
+Entrenador --> U21
+Entrenador --> U22
+Entrenador --> U23
+Entrenador --> U24
+Entrenador --> U25
+Entrenador --> U26
+Entrenador --> U27
+
+Alumno --> U28
+Alumno --> U29
+Alumno --> U30
+Alumno --> U31
+Alumno --> U32
+
+@enduml
